@@ -41,6 +41,12 @@ class LongTravelStage():
     def init(self, serial):
         self.device = self.initialize_device(serial)
 
+    def kill(self):
+        self.device.StopImmediate()
+        self.device.Disconnect()
+        del self
+
+        
     def initialize_device(self,serial):
         from Thorlabs.MotionControl import IntegratedStepperMotorsCLI
         clr.AddReference("Thorlabs.MotionControl.DeviceManagerCLI")
