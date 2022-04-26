@@ -3,3 +3,4 @@ wheel
 pycparser
 pythonnet 
 clr
+clr-loader
