@@ -16,6 +16,7 @@ numpydoc
 sphinx-copybutton
 sphinx_rtd_theme
 wheel
+pycparser
 pythonnet 
 clr
 
