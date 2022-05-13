@@ -93,7 +93,7 @@ class LongTravelStage():
         """
         return Decimal.ToDouble(device.device.GetBacklash())
 
-    def disconect(self):
+    def disconnect(self):
         """
         """
         self.device.Disconnect()
