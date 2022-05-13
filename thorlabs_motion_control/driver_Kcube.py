@@ -51,7 +51,15 @@ class KCube():
         config = device.LoadMotorConfiguration(sn)
         print(f'position {Decimal.ToDouble(device.DevicePosition)}')
         self.device = device
-        
+
+    def kill(self):
+        """
+        orderly exit 
+        """
+        self.device.StopImmediate()
+        self.device.Disconnect()
+        del self
+
     def home(self):
         self.device.Home(0)
         
